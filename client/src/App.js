@@ -3,17 +3,19 @@ import { BrowserRouter as Router, Routes, Route, Navigate, Link } from 'react-ro
 import Register from './pages/Register';
 import Login from './pages/Login';
 import TasksPage from './pages/TasksPage';
+import './App.css';
 
 function App() {
   const [token, setToken] = useState('');
 
   return (
     <Router>
-      <div>
+      <div className='container'>
         <h1>Personal Task Manager</h1>
         {!token && (
           <nav>
-            <Link to="/">Register</Link> | <Link to="/login">Login</Link>
+            <Link to="/">Register</Link>
+            <Link to="/login">Login</Link>
           </nav>
         )}
         <Routes>
