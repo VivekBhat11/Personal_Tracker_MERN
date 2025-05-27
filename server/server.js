@@ -10,6 +10,8 @@ app.use(cors());
 app.use(express.json()); // to parse JSON bodies
 // 👉 Register login routes
 app.use('/api/auth', require('./routes/auth'));
+app.use('/api/tasks', require('./routes/task'));
+
 
 // Simple test route
 app.get('/', (req, res) => {
